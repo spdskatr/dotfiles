@@ -3,6 +3,7 @@ My Linux ricing files.
 
 Packages I refer to
 ```
+breeze-obsidian-cursor-theme
 conky
 i3-gaps
 i3lock-fancy
