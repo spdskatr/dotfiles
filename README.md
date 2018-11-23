@@ -10,7 +10,9 @@ neofetch
 openbox
 polybar
 powerline
+powerline-vim
 rxvt-unicode
+vim
 xbindkeys
 xorg-xclock
 zsh
