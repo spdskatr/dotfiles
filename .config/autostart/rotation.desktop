@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=rotation
+Exec=/home/spdskatr/.xprofile.d/rotate.py2
+StartupNotify=false
+Terminal=true
