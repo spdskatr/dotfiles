@@ -30,7 +30,7 @@
 !.config/polybar/
 !.config/polybar/*
 !.config/powerline/
-!.config/powerline/*
+!.config/powerline/**
 !.config/ranger/
 !.config/ranger/*
 !.config/pasta.txt
