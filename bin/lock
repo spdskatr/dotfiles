@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# light-locker
+#light-locker-command -lp
+
+# i3lock
+i3lock-fancy -f Ubuntu -t "\"$(fortune -sn 50)\"\nType password to unlock" -- scrot -z

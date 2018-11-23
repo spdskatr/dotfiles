@@ -1,0 +1,3 @@
+#!/bin/bash
+date "+Your spiritual advice for %A, %D at %T is:"
+fortune | cowsay | lolcat -f

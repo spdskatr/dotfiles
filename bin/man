@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This script was brought to you by the Relatable GNU Jokes Gang
+if [[ "$1" == "woman" ]]; then
+    echo "No manual entry for $(tput bold)woman$(tput sgr0)... I guess $(tput bold)woman$(tput sgr0) will forever remain a mystery"
+elif [[ "$1" == "spdskatr" ]]; then
+    # "People only set drawings as their desktop background beacause they don't have enough real life experiences"
+    # - Spdskatr
+    # 
+    # "If Red Hat is Linux for grown-ups, Arch is Linux for children. SUCK IT ARCH USERS"
+    # - Bryan Lunduke
+    # https://www.youtube.com/watch?v=eh5MSMycnQw&t=2495s
+    echo "Boring kid whose mind is away with the fairies. Not worth your time tbh"
+else
+    /usr/bin/man -P "less -Q" $*
+fi
