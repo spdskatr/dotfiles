@@ -1,0 +1,10 @@
+XClock*foreground: #fbfbfb
+XClock*background: #263827
+XClock*update: 1
+XClock*geometry:          300x300+50+50
+XClock*borderColor:       #263827
+XClock.Clock.majorColor:  rgba:ff/ff/ff/ff
+XClock.Clock.minorColor:  rgba:ee/ee/ee/ee
+XClock.Clock.hourColor:   rgba:c9/66/11/72
+XClock.Clock.minuteColor: rgba:00/82/9f/72
+XClock.Clock.secondColor: rgba:50/93/30/6f

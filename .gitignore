@@ -10,6 +10,8 @@
 
 !.xprofile.d/
 !.xprofile.d/*
+!.Xresources.d/
+!.Xresources.d/*
 
 !.config/
 !.config/autostart/
