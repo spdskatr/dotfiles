@@ -3,7 +3,7 @@ xset -b
 # Keybindings for volume buttons and backlight
 xbindkeys
 
-~/.xprofile.d/rotate.py2
+$HOME/.xprofile.d/rotate.py2
 
 # light-locker lock screen
 #light-locker &
