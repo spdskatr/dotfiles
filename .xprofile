@@ -4,6 +4,6 @@ xset -b
 xbindkeys
 
 # light-locker lock screen
-#light-locker &
+light-locker --lock-on-suspend &
 
-xss-lock -- "$HOME/bin/lock" &
+#xss-lock -- light-locker-command -l &
