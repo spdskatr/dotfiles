@@ -31,5 +31,6 @@ set belloff=all
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set smartindent
 
 "source $HOME/.vim/colors/colors.vim
