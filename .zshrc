@@ -34,8 +34,19 @@ sl() {
     /usr/bin/sl $* | lolcat
 }
 
-
 eval $(thefuck --alias "fuck")
+# Fallback PS1
+PS1=':) '
 
-powerline-daemon -q
-. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+SPACESHIP_CHAR_SYMBOL=":) "
+autoload -U promptinit
+promptinit
+prompt spaceship
+
+# No colors in tty
+[[ `tty` == "/dev/tty"* ]] && return
+[[ "$TERM" = "screen" ]] && [[ -n "$TMUX" ]] && return
+
+# If I use powerline
+#powerline-daemon -q
+#. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
