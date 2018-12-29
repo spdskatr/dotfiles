@@ -5,10 +5,13 @@ URxvt*foreground:	#ffffff
 !URxvt*shading: 30
 ! Instead of this
 URxvt.depth: 32
-URxvt.background: [20]#000000
-!URxvt.background: #182441
+URxvt.background: [85]#313131
+
+!URxvt.background: #313131
 URxvt.fading: 15
 URxvt.fadeColor: #000000
+
+URxvt.title: Terminal
 
 URxvt*font:		xft:SauceCodePro Nerd Font Mono:style=Regular:size=10
 URxvt*boldFont:		xft:SauceCodePro Nerd Font Mono:style=Bold:size=10
@@ -27,12 +30,3 @@ urxvt*scrollBar:	      false
 urxvt*scrollBar_right:	false
 urxvt*internalBorder:	  12
 urxvt*externalBorder:	  0
-
-urxvt.keysym.Shift-Up:		  command:033]720;1007
-urxvt.keysym.Shift-Down:	  command:033]721;1007
-
-! control arrow
-urxvt.keysym.Control-Up:	  033[1;5A
-urxvt.keysym.Control-Down:	033[1;5B
-urxvt.keysym.Control-Right:	033[1;5C
-urxvt.keysym.Control-Left:	033[1;5D

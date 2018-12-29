@@ -37,6 +37,8 @@
 !.config/ranger/
 !.config/ranger/*
 !.config/pasta.txt
+!.config/tint2/
+!.config/tint2/tint2rc
 
 !bin/
 !bin/lock

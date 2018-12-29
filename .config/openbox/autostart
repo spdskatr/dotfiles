@@ -1,5 +1,5 @@
-~/.fehbg &
-
 xcompmgr &
 
-~/.config/polybar/launch.sh &
+feh --bg-fill /mnt/DATA/Spdskatr/1337/Rice/Wallpapers/zentree_1.png &
+
+tint2 &

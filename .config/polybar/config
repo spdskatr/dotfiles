@@ -59,7 +59,7 @@ font-2 = "WunconSiji:pixelsize=10;2"
 
 modules-left = i3
 modules-center = mpd
-modules-right = pulseaudio xbacklight battery date
+modules-right = pulseaudio xbacklight battery wlan date
 
 tray-position = right
 tray-padding = 2

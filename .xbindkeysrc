@@ -84,7 +84,7 @@
     Alt + Return 
 
 #dmenu_run
-"dmenu_run"
+"rofi -show run"
     m:0x8 + c:40
     Alt + d 
 

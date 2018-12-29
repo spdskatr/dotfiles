@@ -198,7 +198,7 @@ default_border none
 default_floating_border none
 
 # Background
-exec ~/.fehbg
+exec feh --bg-fill /mnt/DATA/Spdskatr/1337/Spud/Spud/Elves.png
 
 # Compositor
 #exec compton -c --config /home/spdskatr/.config/compton.conf
