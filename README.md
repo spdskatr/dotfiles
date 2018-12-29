@@ -13,6 +13,8 @@ polybar
 powerline
 powerline-vim
 rxvt-unicode
+rofi
+tint2
 vim
 xbindkeys
 xorg-xclock
