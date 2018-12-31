@@ -45,6 +45,8 @@
 !bin/man
 !bin/oof
 !bin/snip
+!bin/tint2music
+!bin/wpa_scraper
 
 .config/ranger/history/
 .config/ranger/bookmarks/
