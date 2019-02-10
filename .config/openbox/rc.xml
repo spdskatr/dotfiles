@@ -120,7 +120,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>8</number>
+    <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Desktop 1</name>
@@ -157,10 +157,10 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>15</top>
-    <bottom>55</bottom>
-    <left>15</left>
-    <right>15</right>
+    <top>0</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
     <position>BottomLeft</position>
@@ -270,7 +270,7 @@
       <action name="GoToDesktop">
         <to>8</to>
       </action>
-    </keybind> 
+    </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>

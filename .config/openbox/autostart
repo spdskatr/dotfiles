@@ -1,5 +1,5 @@
-xcompmgr &
-
 feh --bg-fill /mnt/DATA/Spdskatr/1337/Rice/Wallpapers/zentree_1.png &
+
+xcompmgr &
 
 tint2 &

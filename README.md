@@ -19,4 +19,7 @@ vim
 xbindkeys
 xorg-xclock
 zsh
+
+GTK+ themes: 
+Arc, Breeze, Numix (Papirus icons)
 ```

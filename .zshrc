@@ -34,19 +34,31 @@ sl() {
     /usr/bin/sl $* | lolcat
 }
 
+if [ -f $HOME/bin/bash.command-not-found ]; then
+    . $HOME/bin/bash.command-not-found
+fi
+
 eval $(thefuck --alias "fuck")
 # Fallback PS1
 PS1=':) '
 
-SPACESHIP_CHAR_SYMBOL=":) "
-autoload -U promptinit
-promptinit
-prompt spaceship
+# "You're gonna have a bad time" - Sans
+print -P "* You are filled with %B%F{red}DETERMINATION%f%b."
+PS1="%F{red}%B<3%b%f "
 
 # No colors in tty
 [[ `tty` == "/dev/tty"* ]] && return
 [[ "$TERM" = "screen" ]] && [[ -n "$TMUX" ]] && return
 
+PS1="%F{magenta}♥%f "
+
+#SPACESHIP_CHAR_SYMBOL=":) "
+#autoload -U promptinit
+#promptinit
+#prompt spaceship
+
 # If I use powerline
 #powerline-daemon -q
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+

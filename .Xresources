@@ -1,4 +1,4 @@
 #include ".Xresources.d/rxvt-unicode"
-#include ".Xresources.d/term-theme"
+!#include ".Xresources.d/term-theme"
 #include ".Xresources.d/xclock"
 
