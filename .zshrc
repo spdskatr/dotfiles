@@ -38,19 +38,25 @@ if [ -f $HOME/bin/bash.command-not-found ]; then
     . $HOME/bin/bash.command-not-found
 fi
 
+# Thefuck
 eval $(thefuck --alias "fuck")
+
 # Fallback PS1
 PS1=':) '
 
 # "You're gonna have a bad time" - Sans
-print -P "* You are filled with %B%F{red}DETERMINATION%f%b."
-PS1="%F{magenta}%B<3%b%f "
+print -P '* You are filled with %B%F{red}DETERMINATION%f%b.'
+PS1="%F{magenta}%B♥%b%f "
+
+zle_highlight=( default:fg=252 )
 
 # No colors in tty
 [[ `tty` == "/dev/tty"* ]] && return
 [[ "$TERM" = "screen" ]] && [[ -n "$TMUX" ]] && return
 
-PS1="%F{magenta}♥%f "
+PS1="%F{207}♥%f "
+
+set +o promptsp
 
 #SPACESHIP_CHAR_SYMBOL=":) "
 #autoload -U promptinit
