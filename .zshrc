@@ -44,7 +44,7 @@ PS1=':) '
 
 # "You're gonna have a bad time" - Sans
 print -P "* You are filled with %B%F{red}DETERMINATION%f%b."
-PS1="%F{red}%B<3%b%f "
+PS1="%F{magenta}%B<3%b%f "
 
 # No colors in tty
 [[ `tty` == "/dev/tty"* ]] && return
