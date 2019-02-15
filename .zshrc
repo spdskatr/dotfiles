@@ -46,7 +46,9 @@ PS1=':) '
 
 # what kinda narcissistic person would even think up of this crap smh
 # sounds like he's socially insecure for sure
-print -P "[ %t ] %F{red}ZSH: Connection established with kernel%f\n[ %t ] Kernel - Welcome to %B%F{green}Userspace%f%b!\n[ %t ] Kernel - Population: just you and me *wink*"
+print -P "[ %t ] %F{red}ZSH: Connection established with kernel%f"
+print -P "[ %t ] Kernel %F{green}-%f Welcome to %B%F{green}Userspace%f%b!"
+print -P "[ %t ] Kernel %F{green}-%f Population: just you and me *wink*"
 PS1="%F{magenta}%B♥%b%f "
 
 zle_highlight=( default:fg=252 )
