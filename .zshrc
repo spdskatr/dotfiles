@@ -34,9 +34,8 @@ sl() {
     /usr/bin/sl $* | lolcat
 }
 
-if [ -f $HOME/bin/bash.command-not-found ]; then
-    . $HOME/bin/bash.command-not-found
-fi
+# Command not found hook
+. $HOME/bin/cnf
 
 # Thefuck
 eval $(thefuck --alias "fuck")
