@@ -44,8 +44,9 @@ eval $(thefuck --alias "fuck")
 # Fallback PS1
 PS1=':) '
 
-# "You're gonna have a bad time" - Sans
-print -P '* You are filled with %B%F{red}DETERMINATION%f%b.'
+# what kinda narcissistic person would even think up of this crap smh
+# sounds like he's socially insecure for sure
+print -P "[ %t ] %F{red}ZSH: Connection established with kernel%f\n[ %t ] Kernel - Welcome to %B%F{green}Userspace%f%b!\n[ %t ] Kernel - Population: just you and me *wink*"
 PS1="%F{magenta}%B♥%b%f "
 
 zle_highlight=( default:fg=252 )
@@ -54,7 +55,7 @@ zle_highlight=( default:fg=252 )
 [[ `tty` == "/dev/tty"* ]] && return
 [[ "$TERM" = "screen" ]] && [[ -n "$TMUX" ]] && return
 
-PS1="%F{207}♥%f "
+PS1="[ %t ] %n %F{207}-%f "
 
 set +o promptsp
 
