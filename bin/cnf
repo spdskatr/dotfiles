@@ -20,7 +20,7 @@ print_message () {
     RANDOM=$(od -vAn -N4 -tu < /dev/urandom)
 
     message=${messages[${RANDOM} % ${#messages[@]}]}
-    print -P "[ %t ] Kernel %F{green}-%f ${message}"
+    print -P "${K_PROMPT}${message}"
 }
 
 function_exists () {
@@ -56,8 +56,13 @@ else
 fi
 
 command_not_found_handler () {
-    print_message
-    orig_command_not_found_handler "$@"
+    # print_message
+    $HOME/bin/cnf_handler "$K_PROMPT" "$*"
+    ST="$?"
+    if [[ $ST -eq 0 ]]; then
+        orig_command_not_found_handler "$@"
+    fi
+    
 }
 
 

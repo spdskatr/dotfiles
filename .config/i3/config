@@ -188,8 +188,9 @@ bindsym Mod1+r mode "resize"
 #        mode invisible
 #}
 
+# Join the nogaps revolution
 #gaps outer 15
-gaps inner 10
+#gaps inner 10
 
 #default_border pixel 5
 #default_floating_border pixel 5
@@ -198,7 +199,7 @@ default_border none
 default_floating_border none
 
 # Background
-exec feh --bg-fill /mnt/DATA/Spdskatr/1337/Spud/Spud/Elves.png
+exec feh --bg-fill /mnt/DATA/Spdskatr/1337/Rice/Wallpapers/Discard/wallhaven-116010.jpg
 
 # Compositor
 #exec compton -c --config /home/spdskatr/.config/compton.conf

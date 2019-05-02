@@ -88,5 +88,10 @@
     m:0x8 + c:40
     Alt + d 
 
+#Open firefox
+"firefox"
+    m:0x40 + c:41
+    Mod4 + f 
+
 #
 # End of xbindkeys configuration

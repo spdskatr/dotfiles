@@ -11,13 +11,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-setopt correct
+#setopt correct
 
 # Misc crap
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias rm='rm -I'
 alias vi='vim'
+alias grep='grep --color=auto'
 alias less='less -Q'
 
 # owo
@@ -43,20 +44,20 @@ eval $(thefuck --alias "fuck")
 # Fallback PS1
 PS1=':) '
 
-# what kinda narcissistic person would even think up of this crap smh
-# sounds like he's socially insecure for sure
-print -P "[ %t ] %F{red}ZSH: Connection established with kernel%f"
-print -P "[ %t ] Kernel %F{green}-%f Welcome to %B%F{green}Userspace%f%b!"
-print -P "[ %t ] Kernel %F{green}-%f Population: just you and me *wink*"
-PS1="%F{magenta}%B♥%b%f "
+export K_PROMPT='[ %t ] %F{red}%BKernel%b%f %F{green}-%f '
 
-zle_highlight=( default:fg=252 )
+# This has gone too far
+print -P "\r[ %t ] %F{magenta}ZSH: Connection established with kernel%f"
+print -P "${K_PROMPT}Welcome to %B%F{green}Userspace%f%b!"
+print -P "${K_PROMPT}Population: just you and me *wink*"
+
+PS1="[ %t ] %F{blue}%n%f %F{207}-%f "
+
+zle_highlight=( default:fg=251 )
 
 # No colors in tty
 [[ `tty` == "/dev/tty"* ]] && return
 [[ "$TERM" = "screen" ]] && [[ -n "$TMUX" ]] && return
-
-PS1="[ %t ] %n %F{207}-%f "
 
 set +o promptsp
 

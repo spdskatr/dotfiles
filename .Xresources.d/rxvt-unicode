@@ -1,14 +1,14 @@
-URxvt*foreground:	#ffffff
+!URxvt*foreground:	#ffffff
 
 ! Use this if you dont have a compositor
 !URxvt*transparent:  true
 !URxvt*shading: 30
 ! Instead of this
-URxvt.depth: 32
-URxvt.background: [85]#313131
+!URxvt.depth: 32
+!URxvt.background: #000000
 
 !URxvt.background: #313131
-URxvt.fading: 15
+URxvt.fading: 10
 URxvt.fadeColor: #000000
 
 URxvt.title: Terminal
