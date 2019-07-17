@@ -44,6 +44,7 @@ eval $(thefuck --alias "fuck")
 # Fallback PS1
 PS1=':) '
 
+# Chatbot stuff
 export K_PROMPT='[ %t ] %F{red}%BKernel%b%f %F{green}-%f '
 
 # This has gone too far
@@ -69,5 +70,4 @@ set +o promptsp
 # If I use powerline
 #powerline-daemon -q
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-
 

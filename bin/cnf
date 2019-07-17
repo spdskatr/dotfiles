@@ -57,7 +57,7 @@ fi
 
 command_not_found_handler () {
     # print_message
-    $HOME/bin/cnf_handler "$K_PROMPT" "$*"
+    $HOME/bin/cnf_handler "$K_PROMPT" "$*" "$K_LAST"
     ST="$?"
     if [[ $ST -eq 0 ]]; then
         orig_command_not_found_handler "$@"

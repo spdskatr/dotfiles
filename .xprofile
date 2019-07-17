@@ -11,3 +11,4 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 #xss-lock -- light-locker-command -l &
+xrdb ~/.Xresources

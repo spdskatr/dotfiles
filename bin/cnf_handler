@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+# Python script for Kernel chatbot. This is fun! :P
+# Y'know what? It'd be really cool if I harvested all the discord messages I've ever sent to feed into a markov bot, so I can replicate my own messages. Maybe then I'll realise how much of a moron I am.
+
+import os
+import sys
+import random
+
+pref = sys.argv[1]
+cmd = sys.argv[2]
+status = 1
+# I'm so funny
+jokes = [
+    ["How do you generate a random string\\? Make a first year compsci student exit vim."],
+    ["If I placed a battery in a glass of salty water, would the glass of water technically be charged with assault and battery\\?"],
+    ["If 666 is evil, would 25.80697580112788 be considered the root of all evil\\?"],
+    ["If Internet Explorer can ask to be the default browser, don\\'t say you can\\'t ask a girl out."],
+    ["IOI: A place antisocial nerds without lives from all over the world go every year to show off the proof that they haven\\'t done anything except sitting in front of a computer practicing programming for the past 4 years, while being awkward and not really talking to anyone.", "\\'Hey babe\\! I just got chosen for my country\\'s IOI team\\! Oh wait, I don\\'t have a girlfriend\\'", "\\'IA-chan told us to not do touch the banana lol!\\'", "\\(Urban Dictionary, \\#2\\)"],
+
+]
+
+def output(message):
+    os.system("zsh -c \"print -P \"\"%s%s\"\"\"" % (pref, message))
+
+cl = cmd.lower()
+
+# Yeah this isnt the best but anyway
+if cl == "hi":
+    output("Hello! \\/\\(v\\^\\v\\)\\\\\\\\")
+elif cl == "what is love":
+    output("Baby don\\'t hurt me")
+    output("Dont hurt me")
+    output("No more")
+elif cl == "kek":
+    output("kek")
+elif cl == "topkek":
+    output("topkek")
+elif cl == "tell me a joke":
+    joke = random.choice(jokes)
+    for line in joke:
+        output(line)
+elif cl == "uwu":
+    output("uwu")
+elif cl == "fries":
+    output("I feel violated... please stop \\;\\~\\;");
+elif len(cmd) > 20:
+    output("I literally can\\'t tell if you\\'re keymashing or if you\\'re just being plain stupid and not typing in the command correctly.")
+else:
+    status = 0
+
+sys.exit(status)
+

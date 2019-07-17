@@ -48,6 +48,7 @@
 !bin/tint2music
 !bin/wpa_scraper
 !bin/cnf
+!bin/cnf_handler
 
 .config/ranger/history/
 .config/ranger/bookmarks/
