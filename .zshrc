@@ -45,12 +45,11 @@ eval $(thefuck --alias "fuck")
 PS1=':) '
 
 # Chatbot stuff
-export K_PROMPT='[ %t ] %F{red}%BKernel%b%f %F{green}-%f '
+export K_PROMPT='[ %t ] %F{red}%BK3R-M1T%b%f %F{green}-%f '
 
 # This has gone too far
 print -P "\r[ %t ] %F{magenta}ZSH: Connection established with kernel%f"
-print -P "${K_PROMPT}Welcome to %B%F{green}Userspace%f%b!"
-print -P "${K_PROMPT}Population: just you and me *wink*"
+print -P "${K_PROMPT}Status: %B%F{green}ONLINE%f%b"
 
 PS1="[ %t ] %F{blue}%n%f %F{207}-%f "
 
@@ -61,6 +60,8 @@ zle_highlight=( default:fg=251 )
 [[ "$TERM" = "screen" ]] && [[ -n "$TMUX" ]] && return
 
 set +o promptsp
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #SPACESHIP_CHAR_SYMBOL=":) "
 #autoload -U promptinit
