@@ -1,4 +1,0 @@
-#!/bin/bash
-# Legacy
-escrotum -sC $*
-# gnome-screenshot -i
