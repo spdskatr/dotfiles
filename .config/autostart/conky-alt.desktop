@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=conky
-Exec=conky --daemonize --pause=5 -c /home/spdskatr/.config/conky/alt.conf
-StartupNotify=false
-Terminal=false
