@@ -1,0 +1,3 @@
+#!/bin/sh
+# Background art by Nightmargin
+feh --no-fehbg --bg-fill ~/.config/backgrounds/refuge.png

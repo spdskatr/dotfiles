@@ -1,0 +1,86 @@
+print_message () {
+
+    local messages
+    local message
+
+    messages=(
+        "Huh?"
+        "You do realise this is still a terminal, right?"
+        "..."
+        "Wait... what?"
+    )
+
+    # If CMD_NOT_FOUND_MSGS array is populated use those messages instead of the defaults
+    [[ -n ${CMD_NOT_FOUND_MSGS} ]] && messages=( "${CMD_NOT_FOUND_MSGS[@]}" )
+
+    # If CMD_NOT_FOUND_MSGS_APPEND array is populated append those to the existing messages
+    [[ -n ${CMD_NOT_FOUND_MSGS_APPEND} ]] && messages+=( "${CMD_NOT_FOUND_MSGS_APPEND[@]}" )
+
+    # Seed RANDOM with an integer of some length
+    RANDOM=$(od -vAn -N4 -tu < /dev/urandom)
+
+    message=${messages[${RANDOM} % ${#messages[@]}]}
+    print -P "${K_PROMPT}${message}"
+}
+
+function_exists () {
+    # Zsh returns 0 even on non existing functions with -F so use -f
+    declare -f $1 > /dev/null
+    return $?
+}
+
+#
+# The idea below is to copy any existing handlers to another function
+# name and insert the message in front of the old handler in the
+# new handler. By default, neither bash or zsh has has a handler function
+# defined, so the default behaviour is replicated.
+#
+# Also, ensure the handler is only copied once. If we do not ensure this
+# the handler would add itself recursively if this file happens to be
+# sourced multiple times in the same shell, resulting in a neverending
+# stream of messages.
+#
+
+#
+# Zsh
+#
+if function_exists command_not_found_handler; then
+    if ! function_exists orig_command_not_found_handler; then
+        eval "orig_$(declare -f command_not_found_handler)"
+    fi
+else
+    orig_command_not_found_handler () {
+        echo "zsh: command not found: $1"
+        return 127
+    }
+fi
+
+command_not_found_handler () {
+    # print_message
+    $HOME/bin/cnf_handler "$K_PROMPT" "$*" "$K_LAST"
+    ST="$?"
+    if [[ $ST -eq 0 ]]; then
+        orig_command_not_found_handler "$@"
+    fi
+    
+}
+
+
+#
+# Bash
+#
+if function_exists command_not_found_handle; then
+    if ! function_exists orig_command_not_found_handle; then
+        eval "orig_$(declare -f command_not_found_handle)"
+    fi
+else
+    orig_command_not_found_handle () {
+        echo "$0: $1: command not found"
+        return 127
+    }
+fi
+
+command_not_found_handle () {
+    print_message
+    orig_command_not_found_handle "$@"
+}

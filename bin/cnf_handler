@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+
+# Python script for Kernel chatbot. This is fun! :P
+# Y'know what? It'd be really cool if I harvested all the discord messages 
+# I've ever sent to feed into a markov bot, so I can replicate my own 
+# messages. Maybe then I'll realise how much of a moron I am.
+
+import os
+import sys
+import random
+
+pref = sys.argv[1]
+cmd = sys.argv[2]
+status = 1
+# I've outgrown so many of these pickup lines
+pickups = [
+    ["Are you the Australian IOI Team Selection Exam\\? Because I could do you for 5 hours straight, two days in a row, after a week of intensive training at Macquarie University \\>:3c"],
+    ["Are you a creeper\\? \\'cause I could never forget those eyes, eyes, eyes. :3c", "\\(A gamer, 2019\\)"],
+    ["Are you a data structure\\? Because I have several questions :3c"],
+    ["If I\\'m 1, 1, 2, 3, 5, 8..., can you be my 1\\/\\(1-x-x\\^2\\)\?"],
+]
+jokes = [
+    ["How do you generate a random string\\? Make a first year compsci student exit vim."],
+    ["If I placed a battery in a glass of salty water, would the glass of water technically be charged with assault and battery\\?"],
+    ["If 666 is evil, would 25.80697580112788 be considered the root of all evil\\?"],
+    ["If Internet Explorer can ask to be your default browser, don\\'t say you can\\'t ask a girl out."],
+    ["If IE is brave enough to ask you to set it as your default browser, don\\'t tell me you dare not ask a girl out."],
+    ["If you were the captain of a ship that was sinking, and the ship had a container storing various sinks, would you be shipping sinks on a sinking ship\\?"],
+    ["Before we had typewriters or computer keyboards, the only way to press F was to use a piano."],
+    ["What do you call the scratches that you get when a female sheep bites you\\?", "Ewe nicks.", "Get it\\? Unix\\?"],
+    ["What do the square root of a negative number, the endpoint of a derivative function, the x in sin x = 2, and my love life have in common\\?"],
+    ["If I made a problem with Undertale flavour text, would the explanation to the problem be an Editoriel\\?"],
+]
+
+def output(message):
+    os.system("zsh -c \"print -P \"\"%s%s\"\"\"" % (pref, message))
+
+cl = cmd.lower()
+
+# Yeah this isnt the best but anyway
+if cl == "hi":
+    output("Hello! \\(\\*\\^\\-\\^\\*\\)")
+elif cl == "somebody once told me the world is gonna roll me":
+    output("I ain\\'t the sharpest tool in the shed")
+elif cl == "what is love":
+    output("Baby don\\'t hurt me")
+    output("Dont hurt me")
+    output("No more")
+elif cl == "kek":
+    output("kek")
+elif cl == "tell me a joke":
+    joke = random.choice(jokes)
+    for line in joke:
+        output(line)
+elif cl == "tell me a pickup line":
+    pl = random.choice(pickups)
+    for line in pl:
+        output(line)
+elif cl == "sorry" or cl == "im sorry":
+    output("It\\'s okay \\;\\) You know I have no memory anyway")
+elif cl == "uwu":
+    output("uwu")
+elif len(cmd) > 20:
+    output("I literally can\\'t tell if you\\'re keymashing or if you\\'re just being plain stupid and not typing in the command correctly.")
+    output(cmd)
+else:
+    status = 0
+
+sys.exit(status)
+
+
