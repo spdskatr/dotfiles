@@ -13,6 +13,8 @@ I recommend using this font for the config, to make sure that text renders nicel
 alacritty
 conky
 dunst
+dex
+feh
 i3-gaps
 neofetch
 polybar

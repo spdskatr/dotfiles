@@ -108,7 +108,7 @@ font-3 = Unifont:size=8:style=Sans-Serif
 
 modules-left = i3
 modules-center = mpd
-modules-right = xbacklight pulseaudio memory cpu wlan battery date
+modules-right = memory cpu wlan battery date
 
 ;tray-position = right
 ;tray-padding = 2

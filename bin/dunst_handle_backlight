@@ -1,0 +1,9 @@
+#!/bin/bash
+
+xbacklight $*
+DUNST_ID=239858
+
+BL_PERC=$(xbacklight -get)
+BL_INT=${BL_PERC%.*}
+
+dunstify -u normal -t 1000 -r "$DUNST_ID" -h int:value:"$BL_INT" "Brightness: ${BL_INT}%"

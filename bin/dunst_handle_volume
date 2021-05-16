@@ -1,0 +1,15 @@
+#!/bin/bash
+
+pactl set-sink-volume @DEFAULT_SINK@ $1
+DUNST_ID=273483
+
+volume="$(pactl list sinks | grep "^\sVolume" | awk '{ print $5 }' | sed 's/[^0-9]*//g')"
+mute="$(pactl list sinks | grep "^\sMute" | awk '{ print $2 }')"
+if [[ $volume == 0 || "$mute" == "yes" ]]; then
+    dunstify -u normal -t 1000 -r "$DUNST_ID" -h int:value:0 "Volume muted!"
+else
+    dunstify -u normal -t 1000 -r "$DUNST_ID" -h int:value:"$volume" "Volume: ${volume}%"
+fi
+
+# Play the volume changed sound
+canberra-gtk-play -i audio-volume-change
