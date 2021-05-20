@@ -41,22 +41,7 @@ alias pasta='cat $HOME/.config/pasta.txt'
 alias oofpasta='pasta | cowsay -f tux | lolcat -f'
 alias owopasta='oofpasta | owo'
 
-# Command not found hook
-. $HOME/bin/cnf
-
-# Fallback PS1
-PS1=':) '
-
-# Chatbot stuff
-export KERNELNAME=$($HOME/bin/random_name)
-
-export K_PROMPT='%F{14}%B'$KERNELNAME'%b%f %F{green}-%f '
-
-# This has gone too far
-print -P "\r%F{magenta}ZSH: Connected%f"
-print -P ${K_PROMPT}"Status: %B%F{green}ONLINE%f%b"
-
-PS1="%F{9}%n%f %F{red}-%f "
+PROMPT=$'%F{8}┌─(%f%F{11}%n%f%F{8}%)─[%f%B%~%b%F{8}]%(?..─[%F{14}%B%?%b%f])%f\n%F{8}└─%f%B%F{11}%(!.#.$)%f%b '
 
 # No colors in tty
 [[ `tty` == "/dev/tty"* ]] && return

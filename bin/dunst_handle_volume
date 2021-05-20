@@ -1,6 +1,12 @@
 #!/bin/bash
 
-pactl set-sink-volume @DEFAULT_SINK@ $1
+if [[ "$1" == "mute" ]]; then
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+else
+    pactl set-sink-volume @DEFAULT_SINK@ $1
+fi
+
+# Random unique dunst id for modifying notification
 DUNST_ID=273483
 
 volume="$(pactl list sinks | grep "^\sVolume" | awk '{ print $5 }' | sed 's/[^0-9]*//g')"
