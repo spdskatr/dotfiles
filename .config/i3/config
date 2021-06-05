@@ -8,14 +8,12 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-#
-# OneShot Refuge theme by spdskatr
 
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font "pango:Terminus (TTF)"
+font "pango:Pink Chicken 12"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -48,7 +46,7 @@ bindsym XF86AudioPrev exec --no-startup-id mpc prev
 bindsym XF86AudioNext exec --no-startup-id mpc next
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -181,22 +179,22 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Gaps
-gaps inner 10
+gaps inner 5
+gaps bottom 42
 default_border none
 
 # Colours
 # class                 border  backgr. text    indicator child_border
-client.focused          #bd1c4f #d92951 #ffffff #2e9ef4   #bd1c4f
-client.focused_inactive #7f1447 #bd1c4f #ffffff #484e50   #7f1447
-client.unfocused        #400a24 #400a24 #aaaaaa #292d2e   #757575
-client.urgent           #e5d05c #e5d05c #ffffff #e5d05c   #e5d05c
+client.focused          #6996df #6996df #ffffff #32507d   #6996df
+client.focused_inactive #274169 #274169 #ffffff #484e50   #274169
+client.unfocused        #274169 #274169 #aaaaaa #292d2e   #757575
+client.urgent           #fcda81 #fcda81 #ffffff #e5d05c   #e5d05c
 
 # Setup widgets and autostart
 # Background art by Nightmargin
 exec ~/.fehbg
 exec ~/.config/polybar/launch.sh
-exec conky --daemonize --pause 5
-exec conky --daemonize --pause 5 -c ~/.config/conky/alt.conf
+exec conky --daemonize --pause 1
 exec dunst
 
 exec dex -a

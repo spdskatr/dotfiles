@@ -1,4 +1,4 @@
 #!/bin/bash
 # I can't be bothered patching dmenu
 # So i'm just going to use the command line options
-dmenu -fn "Terminus (TTF):style=Bold:size=18" -nb "#19031a" -sb "#ff3e9f" -nf "#7f1447" -sf "#19031a" $*
+dmenu -fn "Terminus (TTF):style=Bold:size=18" -nb "#a7c7fa" -sb "#6996df" -nf "#0b4298" -sf "#ffffff" $*

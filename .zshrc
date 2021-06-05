@@ -31,6 +31,7 @@ alias rm='rm -I'
 alias mv='mv -i'
 alias grep='grep --color=auto'
 alias less='less -Q'
+alias vim='nvim'
 
 # owo
 alias owo='sed -e "s/[lr]/w/g" -e "s/[LR]/W/g"'
@@ -41,7 +42,8 @@ alias pasta='cat $HOME/.config/pasta.txt'
 alias oofpasta='pasta | cowsay -f tux | lolcat -f'
 alias owopasta='oofpasta | owo'
 
-PROMPT=$'%F{8}┌─(%f%F{11}%n%f%F{8}%)─[%f%B%~%b%F{8}]%(?..─[%F{14}%B%?%b%f])%f\n%F{8}└─%f%B%F{11}%(!.#.$)%f%b '
+setopt prompt_subst
+PROMPT=$'%F{8}┌─(%f%F{11}%n%f%F{8}%)─[%f%B%~%b%F{8}]%(?..─[%F{14}%B%?%b%f%F{8}])%f\n%F{8}└─%f%B%F{11}%(!.#.$)%f%b '
 
 # No colors in tty
 [[ `tty` == "/dev/tty"* ]] && return

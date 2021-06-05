@@ -1,3 +1,2 @@
 #!/bin/sh
-# Background art by Nightmargin
-feh --no-fehbg --bg-fill ~/.config/backgrounds/refuge.png
+feh --no-fehbg --bg-fill '/home/spdskatr/.config/backgrounds/mmexport1622116310612.jpg' 

@@ -21,7 +21,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Monofur
+    family: Fira Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -150,7 +150,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -179,30 +179,30 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x19031a'
-    foreground: '0xffffff'
+    background: '0x2b303b'
+    foreground: '0xc0c5ce'
 
   # Normal colors
   normal:
-    black:   '0x757575'
-    red:     '0xbd1c4f'
-    green:   '0x763279'
-    yellow:  '0xe5d05c'
-    blue:    '0x4f1f9a'
-    magenta: '0x721d79'
-    cyan:    '0x7f1447'
-    white:   '0xb8b8b8'
+    black:   '0x2b303b'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x8fa1b3'
+    magenta: '0xb48ead'
+    cyan:    '0x96b5b4'
+    white:   '0xc0c5ce'
 
   # Bright colors
   bright:
-    black:   '0xb8b8b8'
-    red:     '0xff3e9f'
-    green:   '0x853e9a'
-    yellow:  '0xffff70'
-    blue:    '0x7a22da'
-    magenta: '0x981c82'
-    cyan:    '0xd92951'
-    white:   '0x757575'
+    black:   '0x65737e'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x8fa1b3'
+    magenta: '0xb48ead'
+    cyan:    '0x96b5b4'
+    white:   '0xeff1f5'
 
   # Default colors
   #primary:
